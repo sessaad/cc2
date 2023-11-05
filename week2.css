@@ -1,0 +1,49 @@
+/* Default styles for all screens */
+h1 {
+    font-size: 24px;
+}
+
+nav a {
+    color: #333;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+}
+
+/* Large screen view */
+@media screen and (min-width: 900px) {
+    h1::after {
+        content: "I guess...";
+    }
+
+    nav {
+        float: left;
+        width: 30%;
+    }
+
+    .content {
+        float: right;
+        width: 70%;
+    }
+}
+
+/* Print view */
+@media print {
+    h1 {
+        font-size: 1em;
+    }
+
+    nav a {
+        color: #000;
+    }
+
+    img {
+        display: none;
+    }
+
+    body {
+        background-color: transparent;
+    }
+}
